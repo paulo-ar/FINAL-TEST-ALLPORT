@@ -1,0 +1,187 @@
+@import url('hhtps://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+
+body {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #EEECEC;
+    color: #333;
+}
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00604E;
+    color: white;
+    padding: 15px 0;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+.tituloheader {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Lista de enlaces */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* Enlaces */
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* color base del texto */
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* Enlace activo (Home) */
+.nav-links a.active {
+    background-color: #008C72;
+    color: #fff;
+}
+
+/* Efecto hover */
+.nav-links a:hover {
+    background-color: #008C72;
+    color: #fff;
+}
+
+/* Estilo especial para Logout */
+.nav-links a.logout {
+    color: #fff;
+    background-color: #00604E;
+}
+
+.nav-links a.logout:hover {
+    background-color: #008C72;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 40px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+    }
+
+}
+.container {
+    margin: 0 15px;
+}
+
+.form-box {
+    width: 400%;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 17px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: #eee;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn, .btn-cancel {
+    flex: 1;
+    padding: 12px;
+    background: #008C72;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.btn:hover, .btn-cancel:hover {
+    background: #00604E;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 200px;
+    image-align: center;
+}
+
+.logoescuela {
+    display: block;
+    margin: auto 10px auto 10px;
+    max-width: 60px;
+    float: left;
+}

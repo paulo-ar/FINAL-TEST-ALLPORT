@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', serif;
+}
+
+body {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    min-height: 100vh;
+    background: #EEECEC;
+    color: #333;
+}
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00604E;
+    color: white;
+    padding: 15px 0;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+.tituloheader {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Lista de enlaces */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* Enlaces */
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* color base del texto */
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* Enlace activo (Home) */
+.nav-links a.active {
+    background-color: #008C72;
+    color: #fff;
+}
+
+/* Efecto hover */
+.nav-links a:hover {
+    background-color: #008C72;
+    color: #fff;
+}
+
+/* Estilo especial para Logout */
+.nav-links a.logout {
+    color: #fff;
+    background-color: #00604E;
+}
+
+.nav-links a.logout:hover {
+    background-color: #008C72;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 40px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+    }
+
+}
+.container {
+    margin: 0 15px;
+}
+
+.logoescuela {
+    display: block;
+    margin: auto 10px auto 10px;
+    max-width: 60px;
+    float: left;
+}
+
+/* Estilos para la tabla */
+h2 {
+    font-size: 38px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn-agregar {
+    padding: 12px;
+    background: #008C72;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.btn-agregar:hover {
+    background: #00604E;
+}
+
+.agregar {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para la tabla */
+
+/* Contenedor de la tabla */
+.tabla-alumnos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+}
+
+/* Encabezados */
+.tabla-alumnos thead th {
+    background-color: #009688; /* Verde azulado */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Celdas del cuerpo */
+.tabla-alumnos tbody td {
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Quitar bordes de tabla */
+.tabla-alumnos th, 
+.tabla-alumnos td {
+    border: none;
+}
+
+/* Estilo del ID (primera columna redonda) */
+.tabla-alumnos thead th:first-child {
+    width: 50px;
+    border-radius: 50px;
+}
+
+/* Botones */
+.btn-editar, .btn-eliminar {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Botón editar (Azul claro) */
+.btn-editar {
+    background-color: #e6f0ff;
+    color: #007bff;
+}
+
+.btn-editar:hover {
+    background-color: #cfe2ff;
+}
+
+/* Botón eliminar (Rojo claro) */
+.btn-eliminar {
+    background-color: #ffe6e6;
+    color: #e53935;
+    margin-left: 6px;
+}
+
+.btn-eliminar:hover {
+    background-color: #ffcccc;
+}
+
+/* Alinear los botones en una fila limpia */
+.tabla-alumnos td:last-child {
+    white-space: nowrap;
+}
+
+/* Hover fila */
+.tabla-alumnos tbody tr:hover {
+    background-color: #f4f9f8;
+    border-radius: 20px;
+    transition: background 0.2s;
+}
