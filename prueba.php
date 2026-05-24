@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connection.php';
+require_once __DIR__ . '/connection.php';
 
 // Verificar si hay sesión iniciada
 if (!isset($_SESSION['id_alumno'])) {
@@ -53,11 +53,12 @@ $datos_js = json_encode(array_column($aptitudes, 'valor'));
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Resultados - Radar</title>
-    <style>
-      body { font-family: Arial, sans-serif; margin: 30px; background: #f7f7f7; }
-      .panel { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
+      <meta charset="UTF-8">
+      <title>Resultados - Radar</title>
+      <link rel="stylesheet" href="css/estiloUniversalCss.css">
+      <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f7f7f7; }
+        .panel { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
       h1 { margin-top: 0; color: #0b7b4c; }
       table { width: 100%; border-collapse: collapse; margin-top: 16px; }
       th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }

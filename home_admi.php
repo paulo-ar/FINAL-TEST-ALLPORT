@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../connection.php';
+require_once __DIR__ . '/connection.php';
 
 // Verificar si hay sesión iniciada
 if (!isset($_SESSION['id_alumno'])) {
@@ -14,10 +14,10 @@ if (!isset($_SESSION['id_alumno'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Admin</title>
-    <link rel="stylesheet" href="css/estilohomeadmi.css">
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="app-theme home-admin-page with-fixed-header">
     <header class="cabecera">
         <div>
             <img src="logo.png" alt="Logo" class="logoescuela">

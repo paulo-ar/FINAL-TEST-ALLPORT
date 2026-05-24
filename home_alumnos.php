@@ -1,22 +1,9 @@
 <?php
 session_start(); // Start the session
-
-// Database credentials
-$servername = "db";
-$username = "usuario";
-$password = "12345";
-$dbname = "socialService";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once __DIR__ . '/connection.php';
 
 // Check if the user is logged in as a student
-if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'student') {
+if (isset($_SESSION['user_id']) && $_SESSION['role'] === 1) {
     $user_id = $_SESSION['user_id'];
 
     // Fetch user details from the 'alumno' table (student)
@@ -50,10 +37,10 @@ if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'student') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home del Alumno</title>
-    <link rel="stylesheet" href="css/estilohomealumnos.css">
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="app-theme home-alumnos-page with-fixed-header">
     <header class="cabecera">
         <div>
             <img src="logo.png" alt="Logo" class="logoescuela">

@@ -65,11 +65,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Signup de Prueba</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#f5f5f5; padding:40px; }
-    .card { max-width: 480px; margin: 0 auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 6px 14px rgba(0,0,0,0.08); }
+    <meta charset="UTF-8">
+    <title>Signup de Prueba</title>
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
+    <style>
+      body { font-family: Arial, sans-serif; background:#f5f5f5; padding:40px; }
+      .card { max-width: 480px; margin: 0 auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 6px 14px rgba(0,0,0,0.08); }
     h1 { margin-top:0; color:#0b7b4c; }
     label { display:block; margin-top:12px; font-weight:600; }
     input { width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-top:6px; }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connection.php';
+require_once __DIR__ . '/connection.php';
 
 // Verificar si hay sesión iniciada
 if (!isset($_SESSION['id_alumno'])) {
@@ -149,10 +149,11 @@ if ($total_preguntas > 0) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pregunta</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta</title>
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
   <style>
     body {
       background-color: #d9d9d9; /* gris claro del fondo */

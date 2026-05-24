@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connection.php';
+require_once __DIR__ . '/connection.php';
 
 // Verificar si hay sesión iniciada
 if (!isset($_SESSION['id_alumno'])) {
@@ -15,12 +15,12 @@ if (!isset($_SESSION['id_alumno'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD Maestros</title>
-    <link rel="stylesheet" href="dashboard_final.css">
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
-    <body>
+    <body class="app-theme crud-page with-fixed-header">
         <button onclick="history.back()" aria-label="Regresar" style="position:fixed; left:16px; top:72px; transform:none; background:#009688; color:#fff; border:none; width:44px; height:44px; border-radius:50%; cursor:pointer; font-size:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1); z-index:1101;">←</button>
         <header class="cabecera">
         <div>

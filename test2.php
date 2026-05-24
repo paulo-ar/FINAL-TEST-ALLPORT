@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connection.php';
+require_once __DIR__ . '/connection.php';
 
 // Verificar si hay sesión iniciada
 if (!isset($_SESSION['id_alumno'])) {
@@ -183,9 +183,10 @@ if ($indice_actual > $max_indice) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pregunta</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta</title>
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
   
   <style>
     body {

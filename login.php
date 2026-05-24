@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-// Configuración de la base de datos
-$host = 'mysql';  // Este es el nombre del servicio en docker-compose.yml
-$dbname = 'test-allport';
-$username = 'root';
-$password = 'root';
+require_once __DIR__ . '/connection.php';
 
 // Verificar si ya hay una sesión iniciada
 if (isset($_SESSION['id_alumno'])) {
@@ -21,14 +17,6 @@ if (isset($_SESSION['id_alumno'])) {
 // Procesar el formulario cuando se envía
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        // Conectar a la base de datos
-        $conn = new mysqli($host, $username, $password, $dbname);
-        
-        // Verificar conexión
-        if ($conn->connect_error) {
-            throw new Exception("Conexión fallida: " . $conn->connect_error);
-        }
-
         // Obtener datos del formulario
         $user_input = isset($_POST['user_input']) ? trim($_POST['user_input']) : '';
         $password_input = isset($_POST['password']) ? trim($_POST['password']) : '';
@@ -93,9 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="css/estiloUniversalCss.css">
 </head>
-<body>
+<body class="app-theme auth-page">
     <div class="container">
         <div class="form-box" id="login-form">
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
